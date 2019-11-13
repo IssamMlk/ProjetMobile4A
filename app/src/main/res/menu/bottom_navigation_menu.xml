@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_arrox"
+        android:icon="@drawable/logo_fleche_gauche"
+        android:title="Back">
+    </item>
+
+    <item
+        android:id="@+id/ic_dashboard"
+        android:icon="@drawable/logo_dashboard"
+        android:title="Back">
+    </item>
+
+    <item
+        android:id="@+id/ic_android"
+        android:icon="@drawable/logo_android"
+        android:title="Back">
+    </item>
+
+    <item
+        android:id="@+id/ic_photo"
+        android:icon="@drawable/logo_photo"
+        android:title="Back">
+    </item>
+
+</menu>
