@@ -1,14 +1,11 @@
 package com.example.projetmobile4a;
 
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -59,7 +56,7 @@ public class Fragment1 extends Fragment {
 
         call.enqueue(new Callback<List<MyList>>() {
             @Override
-            public void onResponse(Call<List<MyList>> call, Response<List<MyList>> response) {
+            public void  onResponse(Call<List<MyList>> call, Response<List<MyList>> response) {
                 listItems = response.body();
                 //db.execSQL("Insert into MyTable values (" + listItems + ");");
 
