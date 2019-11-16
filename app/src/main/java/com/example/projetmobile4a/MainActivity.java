@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     private FragAdapter myFragAdapter;
     private ViewPager myViewPager;
-    SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
         private void setupViewPager(ViewPager viewPager){
-            FragAdapter adapter = new FragAdapter(getSupportFragmentManager());
-            adapter.addFragment(new Fragment1());
-            adapter.addFragment(new Fragment2());
-            adapter.addFragment(new Fragment3());
-            myViewPager.setAdapter(adapter);
+            FragAdapter Fadapter = new FragAdapter(getSupportFragmentManager());
+            Fadapter.addFragment(new Fragment1());
+            Fadapter.addFragment(new Fragment2());
+            Fadapter.addFragment(new Fragment3());
+            myViewPager.setAdapter(Fadapter);
 
     }
 }
