@@ -1,4 +1,4 @@
-package com.example.projetmobile4a;
+package com.example.projetmobile4a.Model;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
-package com.example.projetmobile4a;
+package com.example.projetmobile4a.View;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,13 +8,13 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.projetmobile4a.Model.MyList;
+import com.example.projetmobile4a.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
@@ -40,7 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override //On recupere l'index avec position et on affiche le texte et l'image
     public void onBindViewHolder(ViewHolder holder, int position) {
         final MyList listItem = listItems.get(position);
-        holder.TitreAcceuil.setText(listItem.getName());
+        //holder.TitreAcceuil.setText(listItem.getName());
         Picasso.get().load(listItem.getImage()).into(holder.ImageAcceuil);
     }
 
@@ -52,11 +51,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {//On recupere ce que l'on souhaite afficher à l'ecran dans le layout
 
         CircleImageView ImageAcceuil;
-        TextView TitreAcceuil;
+        //TextView TitreAcceuil;
         public ViewHolder(View itemView) {
             super(itemView);
             ImageAcceuil = itemView.findViewById(R.id.ImageAcceuil);
-            TitreAcceuil = itemView.findViewById(R.id.TitreAcceuil);
+            //TitreAcceuil = itemView.findViewById(R.id.TitreAcceuil);
         }
     }
 

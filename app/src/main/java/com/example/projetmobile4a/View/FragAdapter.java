@@ -1,4 +1,4 @@
-package com.example.projetmobile4a;
+package com.example.projetmobile4a.View;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

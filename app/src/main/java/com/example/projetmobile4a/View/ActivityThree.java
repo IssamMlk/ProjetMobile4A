@@ -1,4 +1,4 @@
-package com.example.projetmobile4a;
+package com.example.projetmobile4a.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projetmobile4a.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ActivityThree extends AppCompatActivity {

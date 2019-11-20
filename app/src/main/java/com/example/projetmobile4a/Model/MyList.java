@@ -1,4 +1,4 @@
-package com.example.projetmobile4a;
+package com.example.projetmobile4a.Model;
 
 
 //Les variables doivent avoir le même nom que ceux de l'API !! (Sinon SerailizeName)
