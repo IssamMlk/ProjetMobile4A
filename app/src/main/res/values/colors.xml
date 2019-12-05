@@ -6,4 +6,12 @@
     <color name="Transparent">#52FFFFFF</color>
     <color name="Orange">#FF5252</color>
     <color name="Violet">#BF6A258F</color>
+    <color name="TransViolet">#7E8F254A</color>
+    <color name="Red">#D5FF0000</color>
+    <color name="NoColor">#00FFFFFF</color>
+    <color name="DetailBack">#E48F254A</color>
+    <color name="BlueTrans">#E425378F</color>
+    <color name="LightBlue">#5067DB</color>
+    <color name="Blue">#254C8F</color>
+    <color name="DarkBlue">#1B195F</color>
 </resources>

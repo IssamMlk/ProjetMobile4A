@@ -1,10 +1,13 @@
 package com.example.projetmobile4a.View;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,10 +40,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override //On recupere l'index avec position et on affiche le texte et l'image
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         final MyList listItem = listItems.get(position);
-        //holder.TitreAcceuil.setText(listItem.getName());
+
         Picasso.get().load(listItem.getImage()).into(holder.ImageAcceuil);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, listItem.getName(),Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("ImageURL",listItem.getImage());
+                intent.putExtra("Nom",listItem.getName());
+                intent.putExtra("Status",listItem.getStatus());
+                intent.putExtra("Race",listItem.getRace());
+                intent.putExtra("Planete",listItem.getPlanete());
+                //intent.putExtra("Univers",listItem.getUnivers());
+                context.startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override //On retourne le nombre d'élement à afficher
@@ -51,11 +72,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {//On recupere ce que l'on souhaite afficher à l'ecran dans le layout
 
         CircleImageView ImageAcceuil;
-        //TextView TitreAcceuil;
         public ViewHolder(View itemView) {
             super(itemView);
             ImageAcceuil = itemView.findViewById(R.id.ImageAcceuil);
-            //TitreAcceuil = itemView.findViewById(R.id.TitreAcceuil);
         }
     }
 

@@ -4,19 +4,46 @@ package com.example.projetmobile4a.Model;
 //Les variables doivent avoir le même nom que ceux de l'API !! (Sinon SerailizeName)
 
 public class MyList {
-    private String name;
-    private String imgUrl;
+    private String Nom;
+    private String ImageURL;
+    private String Status;
+    private String Race;
+    private String Planete;
+    //private String Univers;
 
-    public MyList(String name, String imgUrl){
-        this.name = name;
-        this.imgUrl = imgUrl;
+
+    public MyList(String Nom, String ImageURL, String Status, String Race, String Planete, String Univers) {
+        this.Nom = Nom;
+        this.ImageURL = ImageURL;
+        this.Status = Status;
+        this.Race = Race;
+        this.Planete = Planete;
+        //this.Univers = Univers;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return Nom;
+    }
     //recupere le titre/nom de l'item pour la page d'acceuil
 
     public String getImage() {
-        return imgUrl;
+        return ImageURL;
     }
-    //recupere l'url de l'image de l'item pour la page d'acceuil (convertie par Picasso)
+//recupere l'url de l'image de l'item pour la page d'acceuil (convertie par Picasso)
+
+     public String getStatus() {
+          return Status;
+     }
+
+      public String getRace() {
+          return Race;
+      }
+
+      public String getPlanete() {
+          return Planete;
+      }
+
+      /*public String getUnivers() {
+          return Univers;
+      }*/
 }

@@ -27,8 +27,6 @@ public class ActivityThree extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.ic_arrox:
-                        Intent intent0 = new Intent(ActivityThree.this, MainActivity.class);
-                        startActivity(intent0);
                         break;
                     case R.id.ic_dashboard:
                         Intent intent1 = new Intent(ActivityThree.this, ActivityOne.class);
@@ -41,6 +39,7 @@ public class ActivityThree extends AppCompatActivity {
                     case R.id.ic_photo:
                         break;
                 }
+                finish();
                 return false;
             }
         });

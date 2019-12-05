@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.MainActivity">
+    tools:context=".View.MainActivity"
+    android:background="@drawable/fond3">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,6 +25,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/TabFragment"
+
                         android:background="@drawable/white_grey_border_top">
 
                     </com.google.android.material.tabs.TabLayout>
@@ -50,15 +52,15 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:id="@+id/Bot">
+            android:id="@+id/Bot"
+            >
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/BottomNavigationBar"
                 android:background="@drawable/white_grey_border_top"
-                app:menu="@menu/bottom_navigation_menu"
-                ></com.google.android.material.bottomnavigation.BottomNavigationView>
+                app:menu="@menu/bottom_navigation_menu" />
 
         </RelativeLayout>
 

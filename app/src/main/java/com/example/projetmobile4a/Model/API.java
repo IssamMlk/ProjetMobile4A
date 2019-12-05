@@ -9,9 +9,9 @@ import retrofit2.http.GET;
 
 public interface API {
 
-    String BASE_URL = "https://dofapi2.herokuapp.com/";
+    String BASE_URL = "https://raw.githubusercontent.com/IssamMlk/DBdex/master/";
 
-    @GET("weapons")
+    @GET("DBZAPI")
     Call<List<MyList>> getItem();
 
 }

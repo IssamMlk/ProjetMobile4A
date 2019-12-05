@@ -35,8 +35,6 @@ public class ActivityOne extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.ic_arrox:
-                        Intent intent0 = new Intent(ActivityOne.this, MainActivity.class);
-                        startActivity(intent0);
                         break;
                     case R.id.ic_dashboard:
                         break;
@@ -49,6 +47,7 @@ public class ActivityOne extends AppCompatActivity {
                         startActivity(intent3);
                         break;
                 }
+                finish();
                 return false;
             }
         });

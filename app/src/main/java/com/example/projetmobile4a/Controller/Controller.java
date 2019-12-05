@@ -53,6 +53,14 @@ public class Controller {
             List<MyList> listItems = new Gson().fromJson(myCacheList,type);
             frag1.showList(listItems);
 
+            for(MyList A: listItems){
+                Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+                Log.d("CACHE: Status",A.getStatus());
+                Log.d("CACHE: Race",A.getRace());
+                Log.d("CACHE: Planete",A.getPlanete());
+            }
+
         }else{
 
 
@@ -69,8 +77,17 @@ public class Controller {
             call.enqueue(new Callback<List<MyList>>() {
                 @Override
                 public void onResponse(Call<List<MyList>> call, Response<List<MyList>> response) {
-                    listItems = response.body();
 
+
+                    listItems = response.body();
+                    for(MyList A: listItems){
+                        Log.d("API: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                        Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+                        Log.d("API: Status",A.getStatus());
+                        Log.d("API: Race",A.getRace());
+                        Log.d("API: Planete",A.getPlanete());
+                        //Log.d("API: Univers",A.getUnivers());
+                    }
                     Gson gson = new GsonBuilder()
                             .setLenient()
                             .create();
