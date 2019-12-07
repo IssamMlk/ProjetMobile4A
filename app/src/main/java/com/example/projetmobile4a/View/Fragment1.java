@@ -9,15 +9,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.R;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
+
+import java.util.List;
 
 
 public class Fragment1 extends Fragment {
 
     public View view;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState){
@@ -28,62 +37,40 @@ public class Fragment1 extends Fragment {
 
 
     private void addInformation() {
-        if (getActivity().getIntent().hasExtra("ImageURL") && getActivity().getIntent().hasExtra("Nom")) {
-            String ImageURL = getActivity().getIntent().getStringExtra("ImageURL");
-            String Nom = getActivity().getIntent().getStringExtra("Nom");
-            String Status = getActivity().getIntent().getStringExtra("Status");
-            String Race = getActivity().getIntent().getStringExtra("Race");
-            String Planete = getActivity().getIntent().getStringExtra("Planete");
-            String Univers = getActivity().getIntent().getStringExtra("Univers");
-            String Groupe = getActivity().getIntent().getStringExtra("Groupe");
-            String Capacite = getActivity().getIntent().getStringExtra("Capacite");
-            String Description = getActivity().getIntent().getStringExtra("Description");
+            //String Nom = getActivity().getIntent().getStringExtra("Nom");
 
-            /*Log.d("Detail: ImageURL",getActivity().getIntent().getStringExtra("ImageURL"));
-            Log.d("Detail: Nom",getActivity().getIntent().getStringExtra("Nom"));
-            Log.d("Detail: Status",getActivity().getIntent().getStringExtra("Status"));
-            Log.d("Detail: Race",getActivity().getIntent().getStringExtra("Race"));
-            Log.d("Detail: Planete",getActivity().getIntent().getStringExtra("Planete"));
-            Log.d("Detail: Groupe", getActivity().getIntent().getStringExtra("Groupe"));*/
+            String JSONkey = getActivity().getIntent().getStringExtra("JSONkey");
+            Gson gson = new Gson();
+            MyList JSONlist = gson.fromJson(JSONkey, MyList.class);
 
 
-            setInfo(ImageURL, Nom, Status, Race, Planete, Univers, Groupe, Capacite, Description);
+            Log.d("Detail: ImageURL",JSONlist.getImage());
+            Log.d("Detail: Nom",JSONlist.getName());
+            Log.d("Detail: Transformation",String.valueOf(JSONlist.getTransformation()));
+
+
+            setInfo(JSONlist);
 
             CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.CollapsingToolBar);
-            collapsingToolbarLayout.setTitle(Nom);
+            collapsingToolbarLayout.setTitle(JSONlist.getName());
             collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.collapsedappbar);
             collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.collapsedappbar);
 
-        }
     }
 
-    private void setInfo(String ImageURL, String Nom, String Status, String Race, String Planete,String Univers, String Groupe, String Capacite, String Description ){
+    private void setInfo(MyList JSONlist){
+
         TextView DetailNom = view.findViewById((R.id.DetailName));
-        DetailNom.setText(Nom);
+        DetailNom.setText(JSONlist.getName());
 
         TextView DetailStatus = view.findViewById((R.id.DetailStatus));
-        DetailStatus.setText(Status);
+        DetailStatus.setText(JSONlist.getStatus());
 
         TextView DetailRace = view.findViewById((R.id.DetailRace));
-        DetailRace.setText(Race);
-
-        TextView DetailPlanete = view.findViewById((R.id.DetailPlanete));
-        DetailPlanete.setText(Planete);
-
-        TextView DetailUnivers = view.findViewById((R.id.DetailUnivers));
-        DetailUnivers.setText(Univers);
-
-        TextView DetailGroupe = view.findViewById(R.id.DetailGroupe);
-        DetailGroupe.setText(Groupe);
-
-        TextView DetailCapacite = view.findViewById(R.id.DetailCapacite);
-        DetailCapacite.setText(Capacite);
-
-        TextView DetailDescription = view.findViewById(R.id.DetailDescription);
-        DetailDescription.setText(Description);
+        DetailRace.setText(JSONlist.getRace());
 
         ImageView DetailImage = view.findViewById(R.id.DetailImage);
-        Picasso.get().load(ImageURL).into(DetailImage);
+        Picasso.get().load(JSONlist.getImage()).into(DetailImage);
     }
 
 }

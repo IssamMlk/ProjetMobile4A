@@ -3,36 +3,23 @@ package com.example.projetmobile4a.Model;
 
 //Les variables doivent avoir le même nom que ceux de l'API !! (Sinon SerailizeName)
 
+import java.util.List;
+
 public class MyList {
     private String Nom;
     private String ImageURL;
     private String Status;
     private String Race;
-    private String Planete;
-    private String Univers;
-    private String Groupe;
-    private String Capacite;
-    private String Description;
+    private List<String> Transformation;
 
 
-    public String getCapacite() {
-        return Capacite;
-    }
 
-    public String getDescription() {
-        return Description;
-    }
 
-    public MyList(String Nom, String ImageURL, String Status, String Race, String Planete, String Univers, String Groupe, String Capacite, String Description) {
+    public MyList(String Nom, String ImageURL, String Status, String Race) {
         this.Nom = Nom;
         this.ImageURL = ImageURL;
         this.Status = Status;
         this.Race = Race;
-        this.Planete = Planete;
-        this.Univers = Univers;
-        this.Groupe = Groupe;
-        this.Capacite = Capacite;
-        this.Description = Description;
     }
 
     public String getName() {
@@ -53,14 +40,7 @@ public class MyList {
           return Race;
       }
 
-      public String getPlanete() {
-          return Planete;
-      }
+      public List<String> getTransformation(){return Transformation;}
 
-      public String getUnivers() {
-          return Univers;
-      }
-
-      public String getGroupe(){ return Groupe;}
 
 }

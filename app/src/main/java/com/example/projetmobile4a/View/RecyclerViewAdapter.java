@@ -52,18 +52,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Toast.makeText(context, listItem.getName(),Toast.LENGTH_SHORT).show();
 
                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("ImageURL",listItem.getImage());
+                Gson gson = new Gson();
+                intent.putExtra("JSONkey", gson.toJson(listItem));
                 intent.putExtra("Nom",listItem.getName());
-                intent.putExtra("Status",listItem.getStatus());
-                intent.putExtra("Race",listItem.getRace());
-                intent.putExtra("Planete",listItem.getPlanete());
-                intent.putExtra("Univers",listItem.getUnivers());
-                intent.putExtra("Groupe",listItem.getGroupe());
-                intent.putExtra("Capacite", listItem.getCapacite());
-                intent.putExtra("Description", listItem.getDescription());
+                //intent.putExtra("ImageURL",listItem.getImage());
 
-                //Gson gson = new Gson();
-                //intent.putExtra("Perso",gson.toJson(MyList));
 
                 context.startActivity(intent);
             }

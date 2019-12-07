@@ -49,17 +49,17 @@ public class Controller {
     public void onCreate(){
         if(sharedPreferences.contains("myCacheList")){
 
-            String myCacheList = sharedPreferences.getString("myCacheList","no data found");
+            String myCache= sharedPreferences.getString("myCacheList","no data found");
             Type type = new TypeToken<List<MyList>>(){}.getType();
-            List<MyList> listItems = new Gson().fromJson(myCacheList,type);
+            List<MyList> listItems = new Gson().fromJson(myCache,type);
             mainactivity.showList(listItems);
 
             for(MyList A: listItems){
-               // Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
-                //Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+                Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
                 Log.d("CACHE: Status",A.getStatus());
                 Log.d("CACHE: Race",A.getRace());
-                Log.d("CACHE: Planete",A.getPlanete());
+                Log.d("CACHE: Transformation", String.valueOf(A.getTransformation()));
                 /*if(A.getNom0()!=null) {
                     Log.d("nom0", A.getNom0());
                 }*/
@@ -85,10 +85,11 @@ public class Controller {
 
                     listItems = response.body();
                     for(MyList A: listItems){
-                       // Log.d("API: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
-                        //Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+                        Log.d("API: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                        Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
                         Log.d("API: Status",A.getStatus());
                         Log.d("API: Race",A.getRace());
+                        Log.d("API: Transformation", String.valueOf(A.getTransformation()));
 
                         /*if(A.getNom0()!=null) {
                             Log.d("nom0", A.getNom0());
@@ -99,10 +100,10 @@ public class Controller {
                             .setLenient()
                             .create();
 
-                    String myCacheList = gson.toJson(listItems);
+                    String myCache = gson.toJson(listItems);
 
                     sharedPreferences.edit()
-                            .putString("myCacheList", myCacheList)
+                            .putString("myCacheList", myCache)
                             .apply();
 
                     mainactivity.showList(listItems);

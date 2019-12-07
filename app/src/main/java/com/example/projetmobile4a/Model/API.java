@@ -11,7 +11,7 @@ public interface API {
 
     String BASE_URL = "https://raw.githubusercontent.com/IssamMlk/DBdex/master/";
 
-    @GET("APIDB")
+    @GET("TSAPI3")
     Call<List<MyList>> getItem();
 
 }
