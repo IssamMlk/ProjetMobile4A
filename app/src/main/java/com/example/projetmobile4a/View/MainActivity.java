@@ -1,41 +1,43 @@
 package com.example.projetmobile4a.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 
+import com.example.projetmobile4a.Controller.Controller;
+import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
-    private FragAdapter myFragAdapter;
-    private ViewPager myViewPager;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    String key = "myCacheList";
+
+    private Controller controller;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myFragAdapter = new FragAdapter(getSupportFragmentManager());
-        myViewPager = findViewById(R.id.ViewPagerContainer); // Ce que contient la page
+        recyclerView = findViewById(R.id.RecyclerView);
 
-        setupViewPager(myViewPager);
-
-
-
-        TabLayout tabLayout = findViewById(R.id.TabFragment);
-        tabLayout.setupWithViewPager(myViewPager);
-
-        tabLayout.getTabAt(0).setIcon(R.drawable.logo_menu_barre);
-        tabLayout.getTabAt(1).setIcon(R.drawable.logo_crayon);
-        tabLayout.getTabAt(2).setIcon(R.drawable.logo_loupe);
+        controller = new Controller(this, getSharedPreferences(key, Context.MODE_PRIVATE));
+        controller.onCreate();
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavigationBar);
         Menu menu = bottomNavigationView.getMenu();
@@ -66,12 +68,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-        private void setupViewPager(ViewPager viewPager){
-            FragAdapter Fadapter = new FragAdapter(getSupportFragmentManager());
-            Fadapter.addFragment(new Fragment1());
-            Fadapter.addFragment(new Fragment2());
-            Fadapter.addFragment(new Fragment3());
-            myViewPager.setAdapter(Fadapter);
 
+    //Permet d'afficher la recyclerView + API à l'écran
+    public void showList(List<MyList> listItems)
+    {
+        recyclerView.setHasFixedSize(true);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        adapter = new RecyclerViewAdapter(listItems, getApplicationContext());
+        recyclerView.setAdapter(adapter);
     }
+
 }

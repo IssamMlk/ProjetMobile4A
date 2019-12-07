@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.example.projetmobile4a.Model.API;
 import com.example.projetmobile4a.View.Fragment1;
 import com.example.projetmobile4a.Model.MyList;
+import com.example.projetmobile4a.View.MainActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -22,23 +23,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Controller {
 
-    private final Fragment1 frag1;
+    private final MainActivity mainactivity;
     private SharedPreferences sharedPreferences;
     private static Controller controller = null;
     public List<MyList> listItems;
 
 
 
-    public Controller(Fragment1 frag1, SharedPreferences sharedPreferences){
-            this.frag1 = frag1;
+    public Controller(MainActivity mainActivity, SharedPreferences sharedPreferences){
+            this.mainactivity = mainActivity;
             this.sharedPreferences = sharedPreferences;
     }
 
 
-    public static Controller getActivity(Fragment1 mainFrag, SharedPreferences sharedPreferences){
+    public static Controller getActivity(MainActivity mainactivity, SharedPreferences sharedPreferences){
 
         if(controller==null){
-            controller = new Controller(mainFrag, sharedPreferences);
+            controller = new Controller(mainactivity, sharedPreferences);
         }
         return controller;
 
@@ -51,14 +52,17 @@ public class Controller {
             String myCacheList = sharedPreferences.getString("myCacheList","no data found");
             Type type = new TypeToken<List<MyList>>(){}.getType();
             List<MyList> listItems = new Gson().fromJson(myCacheList,type);
-            frag1.showList(listItems);
+            mainactivity.showList(listItems);
 
             for(MyList A: listItems){
-                Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
-                Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+               // Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                //Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
                 Log.d("CACHE: Status",A.getStatus());
                 Log.d("CACHE: Race",A.getRace());
                 Log.d("CACHE: Planete",A.getPlanete());
+                /*if(A.getNom0()!=null) {
+                    Log.d("nom0", A.getNom0());
+                }*/
             }
 
         }else{
@@ -81,11 +85,14 @@ public class Controller {
 
                     listItems = response.body();
                     for(MyList A: listItems){
-                        Log.d("API: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
-                        Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
+                       // Log.d("API: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                        //Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
                         Log.d("API: Status",A.getStatus());
                         Log.d("API: Race",A.getRace());
-                        Log.d("API: Planete",A.getPlanete());
+
+                        /*if(A.getNom0()!=null) {
+                            Log.d("nom0", A.getNom0());
+                        }*/
                         //Log.d("API: Univers",A.getUnivers());
                     }
                     Gson gson = new GsonBuilder()
@@ -98,7 +105,7 @@ public class Controller {
                             .putString("myCacheList", myCacheList)
                             .apply();
 
-                    frag1.showList(listItems);
+                    mainactivity.showList(listItems);
                 }
 
                 @Override

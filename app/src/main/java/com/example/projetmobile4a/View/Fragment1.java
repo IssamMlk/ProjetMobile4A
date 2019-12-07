@@ -1,53 +1,89 @@
 package com.example.projetmobile4a.View;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.projetmobile4a.Controller.Controller;
-import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.R;
-import com.example.projetmobile4a.View.RecyclerViewAdapter;
-
-import java.util.List;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 
 public class Fragment1 extends Fragment {
 
     public View view;
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    String key = "myCacheList";
-
-    private Controller controller;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState){
         view = inflater.inflate(R.layout.fragment_layout1, container, false); //On suit le style de fragment_layout1
-        recyclerView = view.findViewById(R.id.RecyclerView);
-
-        controller = new Controller(this, getActivity().getSharedPreferences(key, Context.MODE_PRIVATE));
-        controller.onCreate();
+        addInformation();
         return view;
     }
 
-    //Permet d'afficher la recyclerView + API à l'écran
-    public void showList(List<MyList> listItems)
-    {
-        recyclerView = view.findViewById(R.id.RecyclerView);
-        recyclerView.setHasFixedSize(true);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
-        recyclerView.setLayoutManager(gridLayoutManager);
-        adapter = new RecyclerViewAdapter(listItems, getActivity());
-        recyclerView.setAdapter(adapter);
+
+    private void addInformation() {
+        if (getActivity().getIntent().hasExtra("ImageURL") && getActivity().getIntent().hasExtra("Nom")) {
+            String ImageURL = getActivity().getIntent().getStringExtra("ImageURL");
+            String Nom = getActivity().getIntent().getStringExtra("Nom");
+            String Status = getActivity().getIntent().getStringExtra("Status");
+            String Race = getActivity().getIntent().getStringExtra("Race");
+            String Planete = getActivity().getIntent().getStringExtra("Planete");
+            String Univers = getActivity().getIntent().getStringExtra("Univers");
+            String Groupe = getActivity().getIntent().getStringExtra("Groupe");
+            String Capacite = getActivity().getIntent().getStringExtra("Capacite");
+            String Description = getActivity().getIntent().getStringExtra("Description");
+
+            /*Log.d("Detail: ImageURL",getActivity().getIntent().getStringExtra("ImageURL"));
+            Log.d("Detail: Nom",getActivity().getIntent().getStringExtra("Nom"));
+            Log.d("Detail: Status",getActivity().getIntent().getStringExtra("Status"));
+            Log.d("Detail: Race",getActivity().getIntent().getStringExtra("Race"));
+            Log.d("Detail: Planete",getActivity().getIntent().getStringExtra("Planete"));
+            Log.d("Detail: Groupe", getActivity().getIntent().getStringExtra("Groupe"));*/
+
+
+            setInfo(ImageURL, Nom, Status, Race, Planete, Univers, Groupe, Capacite, Description);
+
+            CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.CollapsingToolBar);
+            collapsingToolbarLayout.setTitle(Nom);
+            collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.collapsedappbar);
+            collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.collapsedappbar);
+
+        }
     }
 
+    private void setInfo(String ImageURL, String Nom, String Status, String Race, String Planete,String Univers, String Groupe, String Capacite, String Description ){
+        TextView DetailNom = view.findViewById((R.id.DetailName));
+        DetailNom.setText(Nom);
+
+        TextView DetailStatus = view.findViewById((R.id.DetailStatus));
+        DetailStatus.setText(Status);
+
+        TextView DetailRace = view.findViewById((R.id.DetailRace));
+        DetailRace.setText(Race);
+
+        TextView DetailPlanete = view.findViewById((R.id.DetailPlanete));
+        DetailPlanete.setText(Planete);
+
+        TextView DetailUnivers = view.findViewById((R.id.DetailUnivers));
+        DetailUnivers.setText(Univers);
+
+        TextView DetailGroupe = view.findViewById(R.id.DetailGroupe);
+        DetailGroupe.setText(Groupe);
+
+        TextView DetailCapacite = view.findViewById(R.id.DetailCapacite);
+        DetailCapacite.setText(Capacite);
+
+        TextView DetailDescription = view.findViewById(R.id.DetailDescription);
+        DetailDescription.setText(Description);
+
+        ImageView DetailImage = view.findViewById(R.id.DetailImage);
+        Picasso.get().load(ImageURL).into(DetailImage);
+    }
 
 }

@@ -9,16 +9,30 @@ public class MyList {
     private String Status;
     private String Race;
     private String Planete;
-    //private String Univers;
+    private String Univers;
+    private String Groupe;
+    private String Capacite;
+    private String Description;
 
 
-    public MyList(String Nom, String ImageURL, String Status, String Race, String Planete, String Univers) {
+    public String getCapacite() {
+        return Capacite;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public MyList(String Nom, String ImageURL, String Status, String Race, String Planete, String Univers, String Groupe, String Capacite, String Description) {
         this.Nom = Nom;
         this.ImageURL = ImageURL;
         this.Status = Status;
         this.Race = Race;
         this.Planete = Planete;
-        //this.Univers = Univers;
+        this.Univers = Univers;
+        this.Groupe = Groupe;
+        this.Capacite = Capacite;
+        this.Description = Description;
     }
 
     public String getName() {
@@ -43,7 +57,10 @@ public class MyList {
           return Planete;
       }
 
-      /*public String getUnivers() {
+      public String getUnivers() {
           return Univers;
-      }*/
+      }
+
+      public String getGroupe(){ return Groupe;}
+
 }

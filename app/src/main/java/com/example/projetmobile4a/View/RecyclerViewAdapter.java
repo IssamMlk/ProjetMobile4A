@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.R;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -50,13 +51,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Toast.makeText(context, listItem.getName(),Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(context, DetailActivity.class);
+               Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("ImageURL",listItem.getImage());
                 intent.putExtra("Nom",listItem.getName());
                 intent.putExtra("Status",listItem.getStatus());
                 intent.putExtra("Race",listItem.getRace());
                 intent.putExtra("Planete",listItem.getPlanete());
-                //intent.putExtra("Univers",listItem.getUnivers());
+                intent.putExtra("Univers",listItem.getUnivers());
+                intent.putExtra("Groupe",listItem.getGroupe());
+                intent.putExtra("Capacite", listItem.getCapacite());
+                intent.putExtra("Description", listItem.getDescription());
+
+                //Gson gson = new Gson();
+                //intent.putExtra("Perso",gson.toJson(MyList));
+
                 context.startActivity(intent);
             }
         });

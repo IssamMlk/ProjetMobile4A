@@ -10,6 +10,7 @@ import java.util.List;
 public class FragAdapter extends FragmentStatePagerAdapter {
 
     private final List<Fragment> myFragList = new ArrayList<>();
+    private final List<String> myFragTitleList = new ArrayList<>();
 
     // Notre constructeur, pour pouvoir l'utiliser dans d'autre class
     public FragAdapter( FragmentManager fm) {
@@ -26,7 +27,13 @@ public class FragAdapter extends FragmentStatePagerAdapter {
         return myFragList.size();
     }
 
-    public void addFragment(Fragment fragment){ //On ajoute le fragment à la list des fragments(le tableau)
+    public void addFragment(Fragment fragment, String title){ //On ajoute le fragment à la list des fragments(le tableau)
+
         myFragList.add(fragment);
+        myFragTitleList.add(title);
+    }
+
+    public CharSequence getPageTitle(int position){
+        return myFragTitleList.get(position);
     }
 }

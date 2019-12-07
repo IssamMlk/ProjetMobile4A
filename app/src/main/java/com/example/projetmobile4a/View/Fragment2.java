@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import com.example.projetmobile4a.R;
 
 public class Fragment2 extends Fragment {
-    private Button GoToFrag;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState){
         View view = inflater.inflate(R.layout.fragment_layout2, container, false);
