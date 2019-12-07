@@ -26,11 +26,14 @@ import java.util.List;
 public class Fragment1 extends Fragment {
 
     public View view;
+    private RecyclerView recyclerView;
+    public static TabTransformationAdapter tabTransformationAdapter;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState){
         view = inflater.inflate(R.layout.fragment_layout1, container, false); //On suit le style de fragment_layout1
+        recyclerView = view.findViewById(R.id.RecyclerView);
         addInformation();
         return view;
     }
@@ -59,6 +62,13 @@ public class Fragment1 extends Fragment {
     }
 
     private void setInfo(MyList JSONlist){
+
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        tabTransformationAdapter = new TabTransformationAdapter(JSONlist.getTransformation(),getActivity().getApplicationContext());
+
+        recyclerView.setAdapter(tabTransformationAdapter);
 
         TextView DetailNom = view.findViewById((R.id.DetailName));
         DetailNom.setText(JSONlist.getName());
