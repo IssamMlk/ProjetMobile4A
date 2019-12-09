@@ -27,14 +27,12 @@
 
 
             <ImageView
+                android:id="@+id/DetailImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/DetailImage"
-                app:layout_collapseMode="none"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
                 android:scaleType="centerCrop"
-                />
+                app:layout_collapseMode="none" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -59,12 +57,6 @@
             android:paddingTop="24dp">
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:layout_height="75dp"
-                app:cardBackgroundColor="@color/Transparent">
-
                 <TextView
                     android:id="@+id/DetailName"
                     android:gravity="center_vertical|start"
@@ -73,11 +65,10 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:textColor="#87CEEB"
                     android:textStyle="italic|bold"
                     android:text="text1"/>
-            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -197,11 +188,6 @@
                     android:textColor="@color/colorPrimary"
                     android:text="text6"/>
             </androidx.cardview.widget.CardView>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/RecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

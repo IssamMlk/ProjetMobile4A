@@ -34,7 +34,8 @@
                 android:layout_marginTop="80dp"
                 android:textSize="30sp"
                 android:id="@+id/ActivityTitle1"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:text="ActivityOne"/>
 
         </RelativeLayout>
 

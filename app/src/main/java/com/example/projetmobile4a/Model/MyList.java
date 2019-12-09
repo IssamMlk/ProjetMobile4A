@@ -10,16 +10,17 @@ public class MyList {
     private String ImageURL;
     private String Status;
     private String Race;
-    private List<String> Transformation;
+    private List<MyTransformationList> Transformation;
 
 
 
 
-    public MyList(String Nom, String ImageURL, String Status, String Race) {
+    public MyList(String Nom, String ImageURL, String Status, String Race, List<MyTransformationList> Transformation) {
         this.Nom = Nom;
         this.ImageURL = ImageURL;
         this.Status = Status;
         this.Race = Race;
+        this.Transformation = Transformation;
     }
 
     public String getName() {
@@ -40,7 +41,7 @@ public class MyList {
           return Race;
       }
 
-      public List<String> getTransformation(){return Transformation;}
+      public List<MyTransformationList> getTransformation(){return Transformation;}
 
 
 }

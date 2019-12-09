@@ -5,7 +5,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.projetmobile4a.Model.API;
-import com.example.projetmobile4a.View.Fragment1;
 import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.View.MainActivity;
 import com.google.gson.Gson;
@@ -47,22 +46,26 @@ public class Controller {
 
 
     public void onCreate(){
-        if(sharedPreferences.contains("myCacheList")){
+        if(sharedPreferences.contains("myCacheList")) {
 
-            String myCache= sharedPreferences.getString("myCacheList","no data found");
-            Type type = new TypeToken<List<MyList>>(){}.getType();
-            List<MyList> listItems = new Gson().fromJson(myCache,type);
+            String myCache = sharedPreferences.getString("myCacheList", "no data found");
+            Type type = new TypeToken<List<MyList>>() {
+            }.getType();
+            List<MyList> listItems = new Gson().fromJson(myCache, type);
             mainactivity.showList(listItems);
 
-            for(MyList A: listItems){
-                Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
-                Log.d("CACHE: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
-                Log.d("CACHE: Status",A.getStatus());
-                Log.d("CACHE: Race",A.getRace());
-                Log.d("CACHE: Transformation", String.valueOf(A.getTransformation()));
-                /*if(A.getNom0()!=null) {
-                    Log.d("nom0", A.getNom0());
-                }*/
+            for (MyList A : listItems) {
+                //Log.d("CACHE: Nom", A.getName()); //Permet d'afficher le nom et l'url de l'image dans RUN pour pouvoir verifier
+                //Log.d("CACHE: ImageURL", A.getImage());// si ça ne fonctionne pas sur un téléphone
+                Log.d("Taille du tableau: ", String.valueOf(A.getTransformation().size()));
+
+
+                for(int i=0;i!=A.getTransformation().size();i++){
+                    if (A.getTransformation().get(i) != null){
+                      Log.d("CACHE: Transformation", A.getTransformation().get(i).getStade());
+                    }
+                }
+
             }
 
         }else{
@@ -89,12 +92,10 @@ public class Controller {
                         Log.d("API: ImageURL",A.getImage());// si ça ne fonctionne pas sur un téléphone
                         Log.d("API: Status",A.getStatus());
                         Log.d("API: Race",A.getRace());
-                        Log.d("API: Transformation", String.valueOf(A.getTransformation()));
+                        Log.d("API: Transformation", A.getTransformation().get(0).getStade());
+                        Log.d("API: Transformation", A.getTransformation().get(1).getStade());
+                        //Log.d("API: Transformation", A.getTransformation().get(2).getStade());
 
-                        /*if(A.getNom0()!=null) {
-                            Log.d("nom0", A.getNom0());
-                        }*/
-                        //Log.d("API: Univers",A.getUnivers());
                     }
                     Gson gson = new GsonBuilder()
                             .setLenient()

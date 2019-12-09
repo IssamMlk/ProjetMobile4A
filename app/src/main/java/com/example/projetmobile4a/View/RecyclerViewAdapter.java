@@ -52,6 +52,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Toast.makeText(context, listItem.getName(),Toast.LENGTH_SHORT).show();
 
                Intent intent = new Intent(context, DetailActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Gson gson = new Gson();
                 intent.putExtra("JSONkey", gson.toJson(listItem));
                 intent.putExtra("Nom",listItem.getName());
@@ -61,7 +62,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 context.startActivity(intent);
             }
         });
-
 
     }
 

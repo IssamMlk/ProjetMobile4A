@@ -26,20 +26,21 @@ import java.util.List;
 public class Fragment1 extends Fragment {
 
     public View view;
-    private RecyclerView recyclerView;
-    public static TabTransformationAdapter tabTransformationAdapter;
+    public int i;
 
+    public Fragment1(int i) {
+        this.i = i;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState){
         view = inflater.inflate(R.layout.fragment_layout1, container, false); //On suit le style de fragment_layout1
-        recyclerView = view.findViewById(R.id.RecyclerView);
-        addInformation();
+        addInformation(view, i);
         return view;
     }
 
 
-    private void addInformation() {
+    private void addInformation(View viewn, int i) {
             //String Nom = getActivity().getIntent().getStringExtra("Nom");
 
             String JSONkey = getActivity().getIntent().getStringExtra("JSONkey");
@@ -47,12 +48,12 @@ public class Fragment1 extends Fragment {
             MyList JSONlist = gson.fromJson(JSONkey, MyList.class);
 
 
-            Log.d("Detail: ImageURL",JSONlist.getImage());
-            Log.d("Detail: Nom",JSONlist.getName());
-            Log.d("Detail: Transformation",String.valueOf(JSONlist.getTransformation()));
+            Log.d("FRAG1: ImageURL",JSONlist.getImage());
+            Log.d("FRAG1: Nom",JSONlist.getName());
+            Log.d("FRAG1: Transformation",JSONlist.getTransformation().get(0).getStade());
 
 
-            setInfo(JSONlist);
+            setInfo(JSONlist, view, i);
 
             CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.CollapsingToolBar);
             collapsingToolbarLayout.setTitle(JSONlist.getName());
@@ -61,14 +62,7 @@ public class Fragment1 extends Fragment {
 
     }
 
-    private void setInfo(MyList JSONlist){
-
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        tabTransformationAdapter = new TabTransformationAdapter(JSONlist.getTransformation(),getActivity().getApplicationContext());
-
-        recyclerView.setAdapter(tabTransformationAdapter);
+    private void setInfo(MyList JSONlist, View view, int i){
 
         TextView DetailNom = view.findViewById((R.id.DetailName));
         DetailNom.setText(JSONlist.getName());
@@ -80,7 +74,7 @@ public class Fragment1 extends Fragment {
         DetailRace.setText(JSONlist.getRace());
 
         ImageView DetailImage = view.findViewById(R.id.DetailImage);
-        Picasso.get().load(JSONlist.getImage()).into(DetailImage);
+        Picasso.get().load(JSONlist.getTransformation().get(i).getImage()).into(DetailImage);
     }
 
 }
