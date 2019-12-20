@@ -41,15 +41,40 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
 
 <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/icon.jpg>
 
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku1.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku2.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/dev.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/gokupetit.jpg>
+L'écran principale de l'application. On y trouve notamment la search bar, la navigationbar, la recyclerview avec l'appel API et le menu pour acceder aux activités Dev et Details.
+
 <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/main.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/menu_dev_detail.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/search.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/story.jpg>
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/video.jpg>
+
+En cliquant sur un item, on arrive sur la detailActivity. On y trouve les fragments avec les informations sur chaques personnages et ses transformations.
+
+<ul>
+    <li>Ici, Son Goku adulte avec ses transformations</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku1.jpg>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku2.jpg>
+    <li>Ici, Son Goku enfant avec ses transformations</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/gokupetit.jpg>
+</ul>
+
+Sur la mainActivity, on peut accéder via la NavigationDrawer à 2 autres activités:
+<ul>
+    <li>L'activityLogo qui donne plusieurs informations générale sur le manga DBZ, on peut aussi y accéder en cliquant sur le logo de Dragon Ball Z</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/story.jpg>
+    <li>L'activitéTwo qui nous renvoie plusieurs videos youtube avec notamment les opening de DBZ</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/video.jpg>
+</ul>    
+
+
+De nouveau sur l'ecran d'acceuil, on peut via la toolbar. 
+<ul>
+    <li>Soit chercher un personnage avec la searchbar</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/search.jpg>
+    <li>Soit accéder à l'activité Dev</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/dev.jpg>
+    <li>Soit accéder à l'activité Detail</li>
+    <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/menu_dev_detail.jpg>
+</ul>
+
+
 
    
         
