@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".View.ActivityLogo"/>
-        <activity android:name=".View.ActivityTwo" />
+        <activity android:name=".View.ActivityTwo"
+            android:theme="@style/Theme.AppCompat.Translucent" />
         <activity android:name=".View.ActivityDev" />
         <activity android:name=".View.ActivityDetail"/>
         <activity
