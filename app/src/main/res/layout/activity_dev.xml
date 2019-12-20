@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:id="@+id/Intro"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:text="Developed by"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    android:id="@+id/DevCard"
+                    android:elevation="11dp"
+                    android:layout_below="@+id/Intro">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="20dp"
+
+                    android:src="@drawable/dev"
+                    android:id="@+id/Photo"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textSize="30sp"
+                        android:id="@+id/Name"
+                        android:layout_below="@+id/Photo"
+                        android:textAlignment="center"
+                        android:text="MALLEK Issam" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/Name"
+                        android:textSize="25sp"
+                        android:id="@+id/Classe"
+                        android:textAlignment="center"
+                        android:text="4AFIS2"/>
+                </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

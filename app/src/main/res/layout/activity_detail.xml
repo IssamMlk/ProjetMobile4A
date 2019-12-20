@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond6">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:id="@+id/IntroProjet"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:text="Projet Mobile 4A"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:id="@+id/MustHave"
+            android:layout_below="@+id/IntroProjet"
+            android:textAlignment="center"
+            android:text="Must Have " />
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:id="@+id/Name"
+                android:layout_below="@+id/MustHave"
+                android:textAlignment="center"
+                android:text="Appel API " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/Name"
+                android:textSize="25sp"
+                android:id="@+id/Classe"
+                android:textAlignment="center"
+                android:text="Utilisation de Github"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/Classe"
+            android:textSize="25sp"
+            android:id="@+id/Classe2"
+            android:textAlignment="center"
+            android:text="Architecture MVC"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/Classe2"
+            android:textSize="25sp"
+            android:id="@+id/Classe3"
+            android:textAlignment="center"
+            android:text="Fragments"/>
+        </RelativeLayout>
+
+
+</RelativeLayout>

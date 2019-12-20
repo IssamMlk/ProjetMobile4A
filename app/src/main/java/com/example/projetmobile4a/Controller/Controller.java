@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.example.projetmobile4a.Model.API;
 import com.example.projetmobile4a.Model.MyList;
 import com.example.projetmobile4a.View.MainActivity;
+import com.example.projetmobile4a.View.RecyclerViewAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -29,6 +30,8 @@ public class Controller {
 
 
 
+
+
     public Controller(MainActivity mainActivity, SharedPreferences sharedPreferences){
             this.mainactivity = mainActivity;
             this.sharedPreferences = sharedPreferences;
@@ -47,7 +50,6 @@ public class Controller {
 
     public void onCreate(){
         if(sharedPreferences.contains("myCacheList")) {
-
             String myCache = sharedPreferences.getString("myCacheList", "no data found");
             Type type = new TypeToken<List<MyList>>() {
             }.getType();
@@ -93,7 +95,7 @@ public class Controller {
                         Log.d("API: Status",A.getStatus());
                         Log.d("API: Race",A.getRace());
                         Log.d("API: Transformation", A.getTransformation().get(0).getStade());
-                        Log.d("API: Transformation", A.getTransformation().get(1).getStade());
+                        //Log.d("API: Transformation", A.getTransformation().get(1).getStade());
                         //Log.d("API: Transformation", A.getTransformation().get(2).getStade());
 
                     }

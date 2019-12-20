@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projetmobile4a">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,15 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.ActivityOne"></activity>
-        <activity android:name=".View.ActivityTwo"></activity>
-        <activity android:name=".View.ActivityThree"></activity>
+        <activity android:name=".View.ActivityOne" />
+        <activity android:name=".View.ActivityTwo" />
+        <activity android:name=".View.ActivityDev" />
         <activity
             android:name=".View.DetailActivity"
-            android:theme="@style/Theme.AppCompat.Translucent">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name=".View.ActivityLogo"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".View.ActivityDetail"/>
     </application>
 
 </manifest>
-
-

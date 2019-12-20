@@ -28,15 +28,11 @@ public class ActivityTwo extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.ic_arrox:
                         break;
-                    case R.id.ic_dashboard:
+                    case R.id.ic_android:
                         Intent intent1 = new Intent(ActivityTwo.this, ActivityOne.class);
                         startActivity(intent1);
                         break;
-                    case R.id.ic_android:
-                        break;
                     case R.id.ic_photo:
-                        Intent intent3 = new Intent(ActivityTwo.this, ActivityThree.class);
-                        startActivity(intent3);
                         break;
                 }
                 finish();

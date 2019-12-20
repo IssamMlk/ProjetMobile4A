@@ -8,6 +8,8 @@
     tools:context=".View.MainActivity"
     android:background="@drawable/fond3">
 
+    
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,10 +20,35 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/Bot">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/Transparent"
+                android:minHeight="?attr/actionBarSize"
+                android:id="@+id/MyToolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageButton
+                    android:id="@+id/LogoBouton"
+                    android:layout_below="@+id/RecyclerView"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:background="@color/NoColor"
+                    android:src="@drawable/logo_dbz"/>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@+id/MyToolbar"
                 />
 
         </RelativeLayout>

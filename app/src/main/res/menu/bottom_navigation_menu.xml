@@ -8,12 +8,6 @@
     </item>
 
     <item
-        android:id="@+id/ic_dashboard"
-        android:icon="@drawable/logo_dashboard"
-        android:title="dashboard">
-    </item>
-
-    <item
         android:id="@+id/ic_android"
         android:icon="@drawable/logo_android"
         android:title="android">
