@@ -3,9 +3,9 @@
 MALLEK Issam 4AFSI2
 
 <H2>Présentation du projet</H2>
-
+<div align="justify">
 Dans le cadre de notre quatrième année, nous sommes ammenés à réaliser un projet mobile. Le but de ce projet est de réaliser une application mobile qui execute un appel API, qui possédent un ou des fragments, une architecture de type MVC; contrairement à l'année passée, nous devions avoir une utilisation plus approfondie de Github (avec plusieurs branch...) et un design plus travaillé.
-Cette application affiche une grille de personnage du manga Dragon Ball Z et lors du choix d'un élément de la liste, une fiche détaillé du personnage s'ouvre alors donnant son nom, ses differentes transformations et plusieurs informations complémentaire.
+Cette application affiche une grille de personnage du manga Dragon Ball Z et lors du choix d'un élément de la liste, une fiche détaillé du personnage s'ouvre alors donnant son nom, ses differentes transformations et plusieurs informations complémentaire.</div>
 
 <H2>Consignes respectées:</H2>
 <ul>
