@@ -43,7 +43,7 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
 
 L'écran principale de l'application. On y trouve notamment la search bar, la navigationbar, la recyclerview avec l'appel API et le menu pour acceder aux activités Dev et Details.
 
-<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/main.jpg height="400" width="300">
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/main.jpg height="600" width="300">
 
 En cliquant sur un item, on arrive sur la detailActivity. On y trouve les fragments avec les informations sur chaques personnages et ses transformations.
 
