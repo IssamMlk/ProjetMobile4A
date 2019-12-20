@@ -11,31 +11,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/TopBar">
-
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </com.google.android.material.appbar.AppBarLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/BottomBar"
             android:layout_below="@+id/TopBar">
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/YoutubeRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:textSize="30sp"
-                android:id="@+id/ActivityTitle2"
-                android:textAlignment="center"
-                android:text="ActivityTwo"/>
+                android:layout_height="match_parent"/>
+
 
         </RelativeLayout>
 
