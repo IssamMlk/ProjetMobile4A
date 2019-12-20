@@ -25,7 +25,7 @@ Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
     <li>Affichage d'une liste dans un RecyclerView</li>
     <li>Affichage du détail d'un item de la liste</li>
     <li>Fonctions supplémentaires:</li>
-        -Affichage en grille
+    <ol>Affichage en grille</ol>
         -Message qui indique l'item choisi
         -Icon
         -CircleImageView
