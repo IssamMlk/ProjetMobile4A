@@ -29,7 +29,7 @@ public class ActivityTwo extends AppCompatActivity {
                     case R.id.ic_arrox:
                         break;
                     case R.id.ic_android:
-                        Intent intent1 = new Intent(ActivityTwo.this, ActivityOne.class);
+                        Intent intent1 = new Intent(ActivityTwo.this, ActivityLogo.class);
                         startActivity(intent1);
                         break;
                     case R.id.ic_photo:

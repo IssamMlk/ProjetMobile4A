@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.ic_arrox:
                         break;
                     case R.id.ic_android:
-                        Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
+                        Intent intent1 = new Intent(MainActivity.this, ActivityLogo.class);
                         startActivity(intent1);
                         break;
                     case R.id.ic_photo:
