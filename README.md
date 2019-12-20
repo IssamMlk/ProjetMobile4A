@@ -8,7 +8,7 @@ Dans le cadre de notre quatrième année, nous sommes ammenés à réaliser un p
 Cette application affiche une grille de personnage du manga Dragon Ball Z et lors du choix d'un élément de la liste, une fiche détaillé du personnage s'ouvre alors donnant son nom, ses differentes transformations et plusieurs informations complémentaire.
 Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
 
-##Consignes respectées:
+<H2>Consignes respectées:</H2>
     Appels API
     Architecture de type MVC
     6 Activités: 
@@ -34,7 +34,7 @@ Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
         -ImageButton
         -Cache
         
-##Détails des fonctionnalitées
+<H2>Détails des fonctionnalitées:</H2>
 
 
    
