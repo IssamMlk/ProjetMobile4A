@@ -13,19 +13,19 @@ Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
     <li>Appels API</li>
     <li>Architecture de type MVC</li>
     <li>6 Activités:</li> 
-            - Main Activity: Contient la recyclerView, C'est l'écran principale et d'acceuil
-            - DetailActivity: Contient les fragment et les détails sur chaque personnage
-            - ActivityLogo: Contient des informations sur le manga DBZ
-            - ActivityTwo: Contient les videos youtube(Opening DBZ)
-            - ActivityDev: Contient le nom, la photo et la classe du developeur de l'application
-            - ActivityDetail: Contient un résumé du readme avec toutes les consignes respectés
+            <ol>- Main Activity: Contient la recyclerView, C'est l'écran principale et d'acceuil</ol>
+            <ol>- DetailActivity: Contient les fragment et les détails sur chaque personnage</ol>
+            <ol>- ActivityLogo: Contient des informations sur le manga DBZ</ol>
+            <ol>- ActivityTwo: Contient les videos youtube(Opening DBZ)</ol>
+            <ol>- ActivityDev: Contient le nom, la photo et la classe du developeur de l'application</ol>
+            <ol>- ActivityDetail: Contient un résumé du readme avec toutes les consignes respectés</ol>
     <li>Fragments</li>
     <li>CollapsingToolbar</li>
     <li>GitFlow</li>
     <li>Affichage d'une liste dans un RecyclerView</li>
     <li>Affichage du détail d'un item de la liste</li>
     <li>Fonctions supplémentaires:</li>
-    <ol>Affichage en grille</ol>
+    <ol>- Affichage en grille</ol>
         <ol>- Message qui indique l'item choisi</ol>
         <ol>- Icon</ol>
         <ol>- CircleImageView</ol>
