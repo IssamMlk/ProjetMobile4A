@@ -9,21 +9,22 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
 Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
 
 <H2>Consignes respectées:</H2>
-    Appels API
-    Architecture de type MVC
-    6 Activités: 
+<ul>
+    <li>Appels API</li>
+    <li>Architecture de type MVC</li>
+    <li>6 Activités:</li> 
             - Main Activity: Contient la recyclerView, C'est l'écran principale et d'acceuil
             - DetailActivity: Contient les fragment et les détails sur chaque personnage
             - ActivityLogo: Contient des informations sur le manga DBZ
             - ActivityTwo: Contient les videos youtube(Opening DBZ)
             - ActivityDev: Contient le nom, la photo et la classe du developeur de l'application
             - ActivityDetail: Contient un résumé du readme avec toutes les consignes respectés
-    Fragments
-    CollapsingToolbar
-    GitFlow
-    Affichage d'une liste dans un RecyclerView
-    Affichage du détail d'un item de la liste
-    Fonctions supplémentaires:
+    <li>Fragments</li>
+    <li>CollapsingToolbar</li>
+    <li>GitFlow</li>
+    <li>Affichage d'une liste dans un RecyclerView</li>
+    <li>Affichage du détail d'un item de la liste</li>
+    <li>Fonctions supplémentaires:</li>
         -Affichage en grille
         -Message qui indique l'item choisi
         -Icon
@@ -33,7 +34,7 @@ Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
         -VideoPlayer
         -ImageButton
         -Cache
-        
+</ul>        
 <H2>Détails des fonctionnalitées:</H2>
 
 
