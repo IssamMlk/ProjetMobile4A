@@ -37,6 +37,15 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
 <H2>Détails des fonctionnalitées:</H2>
 
 <img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/icon.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku1.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/detail_goku2.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/dev.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/gokupetit.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/main.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/menu_dev_detail.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/search.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/story.jpg>
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/video.jpg>
 
    
         
