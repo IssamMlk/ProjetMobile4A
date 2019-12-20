@@ -32,6 +32,7 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
         <ol>- <strong>NavigationBar</strong></ol>
         <ol>- <strong>VideoPlayer</strong></ol>
         <ol>- ImageButton</ol>
+    <ol>- API fait par moi-même</ol>
             <ol>- <strong>Cache</strong></ol>
 </ul>        
 <H2>Détails des fonctionnalitées:</H2>
@@ -76,6 +77,6 @@ De nouveau sur l'ecran d'acceuil, on peut via la toolbar.
 
 J'ai moi même réaliser l'API
 
-   
+   https://github.com/IssamMlk/DBdex/blob/master/TSAPI7.2
         
     
