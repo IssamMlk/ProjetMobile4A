@@ -36,7 +36,7 @@ Cette application affiche une grille de personnage du manga Dragon Ball Z et lor
 </ul>        
 <H2>Détails des fonctionnalitées:</H2>
 
-<img src=test >
+<img src=https://github.com/IssamMlk/ProjetMobile4A/blob/master/Images/icon.jpg>
 
    
         
