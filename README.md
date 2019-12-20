@@ -26,14 +26,14 @@ Il s'agit en d'autres termes d'une Encyclopédie sur Dragon Ball Z.
     <li>Affichage du détail d'un item de la liste</li>
     <li>Fonctions supplémentaires:</li>
     <ol>Affichage en grille</ol>
-        -Message qui indique l'item choisi
-        -Icon
-        -CircleImageView
-        -SearchBar
-        -NavigationBar
-        -VideoPlayer
-        -ImageButton
-        -Cache
+        <ol>- Message qui indique l'item choisi</ol>
+        <ol>- Icon</ol>
+        <ol>- CircleImageView</ol>
+        <ol>- SearchBar</ol>
+        <ol>- NavigationBar</ol>
+        <ol>- VideoPlayer</ol>
+        <ol>- ImageButton</ol>
+            <ol>- Cache</ol>
 </ul>        
 <H2>Détails des fonctionnalitées:</H2>
 
